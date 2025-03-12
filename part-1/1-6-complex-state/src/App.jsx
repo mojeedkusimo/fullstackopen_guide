@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// version 1.0
 // const App = () => {
 //   const [left, setLeft] = useState(0)
 //   const [right, setRight] = useState(0)
@@ -23,6 +24,24 @@ const App = () => {
     left: 0, right: 0
   })
 
+  // version 2.0
+  // const handleLeftClick = () => {
+  //   const newClicks = { 
+  //     left: clicks.left + 1, 
+  //     right: clicks.right 
+  //   }
+  //   setClicks(newClicks)
+  // }
+
+  // const handleRightClick = () => {
+  //   const newClicks = { 
+  //     left: clicks.left, 
+  //     right: clicks.right + 1 
+  //   }
+  //   setClicks(newClicks)
+  // }
+
+  // version 2.1
   // const handleLeftClick = () => {
   //   const newClicks = { 
   //     ...clicks, 
@@ -44,7 +63,7 @@ const App = () => {
   
   const handleRightClick = () =>
     setClicks({ ...clicks, right: clicks.right + 1 })
-  
+
   return (
     <div>
       {clicks.left}
