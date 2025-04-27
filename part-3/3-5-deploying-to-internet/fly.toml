@@ -1,0 +1,25 @@
+# fly.toml app configuration file generated for 3-5-deploying-to-internet on 2025-04-25T04:26:49+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = '3-5-deploying-to-internet'
+primary_region = 'ams'
+
+[env]
+  PORT = "3002"
+
+[build]
+
+[http_service]
+  internal_port = 3002
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
